@@ -1,0 +1,20 @@
+1. [Firewall Manager]의  [보안] 섹션의 [Azure Firewall 정책] 선택
+
+2. [policy-01] 체크 상자 선택 후 [Manage associations>허브 연결] 선택
+
+3. [Azure Firewall 정책을 사용하는 보안 허브 - Policy-01] 블레이드에서 "Hub-01" 체크상자 선택 후 [추가] 버튼 클릭.
+
+4. [새로 고침] 후 확인
+
+5. [Firewall Manager]의 [배포] 섹션의 [가상 허브] 선택
+
+6. [Firewall Manager | 가상 허브] 블레이드에서 "Hub-01" 클릭
+
+7. [Hub-01 | 개요] 블레이드에서 [Settings] 섹션의 [보안 구성] 클릭
+
+8. [Hub-01 | 보안 구성] 블레이드 설정 후 [저장]
+- [인터넷 트래픽] 드롭다운: Azure Firewall
+- [프라이빗 트래픽] : Send via Azure Firewall
+
+9. INTERNET TRAFFIC과 PRIVATE TRAFFIC이 "Azure 방화벽으로 보호됨"으로 바뀌는지 확인.
+

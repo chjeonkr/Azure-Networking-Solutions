@@ -1,0 +1,11 @@
+1. PowerShell 모드 Cloud Shell 실행
+
+2. 클라우드 셸 스토리지 계정의 파일 공유에 m02 폴더 만들고 다음 파일 업로드
+- ResearchVMazuredeploy.json
+- ResearchVMazuredeploy.parameters.json
+
+3. 다음 명령 실행해 ResearchVM 배포
+$RGName = "ContosoResourceGroup"
+
+New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ResearchVMazuredeploy.json -TemplateParameterFile ResearchVMazuredeploy.parameters.json
+

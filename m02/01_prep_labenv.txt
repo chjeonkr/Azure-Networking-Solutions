@@ -1,0 +1,18 @@
+1. testvm1과 ManufacturingVM간의 전역 피어링 제거
+
+2. ManufacturingVM 블레이드의 [실행 명령]-[RunPowerShellScript]에서 다음 명령 실행
+Test-NetConnection 10.20.20.4 -port 3389
+--> 연결 실패 확인
+--------------메시지---------------------
+WARNING: TCP connect to (10.20.20.4 : 3389) failed
+WARNING: Ping to 10.20.20.4 failed with status: TimedOut
+
+
+ComputerName           : 10.20.20.4
+RemoteAddress          : 10.20.20.4
+RemotePort             : 3389
+InterfaceAlias         : Ethernet
+SourceAddress          : 10.30.10.4
+PingSucceeded          : False
+PingReplyDetails (RTT) : 0 ms
+TcpTestSucceeded       : False

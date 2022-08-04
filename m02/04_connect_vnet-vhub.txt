@@ -1,0 +1,11 @@
+1. ContosoVirtualWAN의 [연결] 섹션에서 [가상 네트워크 연결] 선택
+
+2. [ContosoVirtualWAN | 가상 네트워크 연결] 블레이드에서 [+연결 추가] 
+- 연결 이름: ContosoVirtualWAN-to-ResearchVNet
+- 허브: ContosoVirtualWANHub-WestUS
+- 리소스 그룹: ContosoResourceGroup
+- 가상 네트워크: ResearchVNet
+- 전파 안 함: 예
+- 경로 테이블 연결: Default
+
+

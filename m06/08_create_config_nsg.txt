@@ -1,0 +1,34 @@
+1. 네트워크 보안 그룹 추가
+- 리소스 그룹: myResourceGroup
+- 이름: ContosoPrivateNSG
+- 지역: East US
+
+2. ContosoPrivateNSG의 [설정] 섹션의 [아웃바운드 보안 규칙] 클릭
+
+3. 아웃바운드 보안 규칙 1 추가하기
+- 소스: VirtualNetwork
+- 대상: Service Tag
+- 대상 서비스 태그: Storage
+- 서비스: Custom
+- 대상 포트 범위: *
+- 이름: Allow-Storage-All
+
+4. 아웃바운드 보안 규칙 2 추가하기
+- 소스: VirtualNetwork
+- 대상: Service Tag
+- 대상 서비스 태그: Internet
+- 서비스: Custom
+- 대상 포트 범위: *
+- 작업: 거부
+- 이름: Deny-Internet-All
+
+5. 인바운드 규칙 추가하기
+- 대상 주소: VirtualNetwork
+- 서비스: Custom
+- 대상 포트 범위: 3389
+- 우선 순위: 120
+- 이름: Allow-RDP-All
+
+6. ContosoPrivateNSG을 서브넷과 연결하기
+- 가상 네트워크: CoreServicesVNet
+- 서브넷: Private

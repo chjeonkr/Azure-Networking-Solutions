@@ -1,0 +1,16 @@
+1. PowerShell 모드로 Cloud Shell 실행
+
+2. Cloud Shell 스토리지 계정의 파일 공유 내 m05 폴더에 다음 파일 업로드
+- FirewallManager.json
+- FirewallManager.parameters.json
+- 07_deploy_vm.ps1
+
+3. 07_deploy_vm.ps1 실행
+
+4. Srv-workload-01 VM의 개인 IP 주소 확인
+10.2.1.4
+
+5. Srv-workload-02 VM의 개인 IP 주소 확인
+10.3.1.4
+
+

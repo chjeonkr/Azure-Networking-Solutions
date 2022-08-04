@@ -1,0 +1,17 @@
+1. BreakingPoint Cloud 계정 만들기
+https://breakingpoint.cloud/login
+ID: steelflea@outlook.com
+PW: 강철벼룩090!
+Rkdcjfqufnr090!
+
+2. MyPublicIPAddress 모니터링
+- 메트릭: Under DDoS attack or not
+
+3. DDoS TEST CONFIGURATION 화면
+- Target IP Address: MyPublicIPAddress 값
+- Port Number: 22
+- DDoS Profile: TCP SYN Flood
+- Test Size: 100K pps, 50 Mbps and 4 Source Ips
+- Test Duration: 10 Minutes
+
+4. Azure 구독 추가 후 진행됨 (실행 후 10분 소요)

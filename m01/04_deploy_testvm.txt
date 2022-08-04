@@ -1,0 +1,16 @@
+1. Cloud Shell에서 다음 명령으로 ManufacturingVM 배포하기
+$RGName = "ContosoResourceGroup"
+
+New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile ManufacturingVMazuredeploy.json -TemplateParameterFile ManufacturingVMazuredeploy.parameters.json
+
+2. RDP를 사용해 ManufacturingVM 연결
+- 사용자 이름: TestUser
+- 암호: TestPa$$w0rd!
+
+3. RDP를 사용해 TestVM1 연결
+개인 IPv4 주소 확인: 10.20.20.4
+
+4. ManufacturingVM의 PowerShell 프롬프트에서 TestVM1 연결 확인
+ Test-NetConnection 10.20.20.4 -port 3389
+--> 서로 다른 네트워크 이기 때문에 연결 실패
+

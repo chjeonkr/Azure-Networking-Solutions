@@ -1,0 +1,33 @@
+1. Cloud Shell 스토리지 계정의 파일 공유에 다음 파일 업로드
+- m04 폴더 이동
+- webapp-korpub.zip
+- webapp-uspub.zip
+
+2. 첫 번째 웹 앱 만들기
+[기본 사항]
+- 리소스 그룹: ContosoResourceGroup
+- 이름: webkor[SUFFIX]
+- 런타임 스택: ASP.NET V4.8
+- 운영 체제: Windows
+- 지역: 한국 중부
+- Windows 플랜: asp-webkor
+- SKU 및 크기: 표준 S1
+
+[모니터링]
+Application Insights: 아니오
+
+3. 두 번째 웹 앱 만들기
+2번의 설정 중 다음 사항만 변경하고 나머지 동일하게 설정
+[기본 사항]
+- 리소스 그룹: ContosoResourceGroup
+- 이름: webus[SUFFIX]
+- 지역: East US
+- Windows 플랜: asp-webus
+
+4. Cloud Shell을 Bash로 실행
+
+5. 웹 앱 코드 배포하기
+5.1 webkor 앱 서비스에 배포하기
+az webapp deployment source config-zip --resource-group ContosoResourceGroup --src webapp-korpub.zip --name webkorkdk
+5.2 webus 앱 서비스에 배포하기
+az webapp deployment source config-zip --resource-group ContosoResourceGroup --src webapp-uspub.zip --name webuskdk

@@ -1,0 +1,7 @@
+1. Cloud Shell의 파일 공유에 m03 폴더 생성
+
+2. 다음 파일 업로드
+- azuredeploy.json
+- azuredeploy.parameters.vm1.json
+- azuredeploy.parameters.vm2.json
+- azuredeploy.parameters.vm3.json

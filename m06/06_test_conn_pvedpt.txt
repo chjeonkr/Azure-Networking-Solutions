@@ -1,0 +1,16 @@
+1. myVM을 베스천으로 연결
+
+2. Windows PowerShell 실행
+
+3. 웹 앱 이름에 대한 사설 IP 주소 반환 확인
+ nslookup <your- webapp-name>.azurewebsites.net
+----- 메시지
+Server:  UnKnown
+Address:  168.63.129.16
+
+Non-authoritative answer:
+Name:    app-kdk.privatelink.azurewebsites.net
+Address:  10.0.0.5
+Aliases:  app-kdk.azurewebsites.net
+
+4. myVM 브라우저에서 웹 앱 접속

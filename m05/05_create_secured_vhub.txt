@@ -1,0 +1,20 @@
+1. Firewall Manager의 [시작] 블레이드에서 [개요] 탭 클릭
+2. [보안 가상 허브 보기] 클릭
+3. [Firewall Manager | 가상 허브] 블레이드에서 [새 보안 가상 허브 만들기] 클
+릭
+[기본 사항]
+- 리소스 그룹: fw-manager-rg
+- 지역: 한국 중부
+- 보안 가상 허브 이름: Hub-01
+- 허브 주소 공간: 10.2.0.0/16
+- 기존 vWAN을 선택하거나 새로 만드세요.: 새 vWAN
+- Virtual WAN 이름: Vwan-01
+(30분 소요)
+
+4. [Firewall Manager]의  [배포] 섹션의 [가상 허브] 선택
+
+5. [Firewall Manager | 가상 허브] 블레이드에서 "Hub-01" 클릭.
+
+6. [Hub-01]의 [Azure Firewall] 섹션에서 [공용 IP 구성] 선택
+
+7. IP 주소 기록: 20.249.62.149

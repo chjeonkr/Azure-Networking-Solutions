@@ -1,0 +1,54 @@
+1. DDos 원격 측정 구성하기
+1.1 공용 IP 주소 만들기
+- SKU: 기본
+- 이름: MyPublicIPAddress
+- IP 주소 할당: 정적
+- DNS 이름 레이블: mypublicdns{SUFFIX}
+- 리소스 그룹: MyResourceGroup
+- 지역: East US
+
+1.2 MyDdoSProtectionPlan 구성
+- [모니터링] 섹션의 [메트릭] 선택
+- [범위] 상자에서 [MyPublicIPAddress] 선택
+- [메트릭] 상자에서 "Inbound packets dropped DDoS" 선택
+- [집계] 상자에서 "최대값" 선택
+
+2. DDos 진단 로그 구성하기(설정 방법만 확인)
+2.1 MyPublicIPAddress의 [모니터링] 섹션에서 [진단 설정] 선택
+- [+ 진단 설정 추가] 클릭
+
+2.2 [진단 설정] 블레이드
+- 진단 설정 이름: MyDiagnosticSetting
+- 로그-범주: 3개 log 체크 상자 선택
+- 로그-메트릭: AllMetrics
+- 대상 세부 정보: Log Analytics 작업영역에 보내기
+
+3. VM 배포하기
+[기본 사항]
+- 리소스 그룹: MyResourceGroup
+- 가상 머신 이름: MyVirtualMachine
+- 지역: East US
+- 이미지: Ubuntu Server 18.04 LTS - Gen 1 
+- 크기: Standard_B1ls
+- 인증 형식: SSH 공개 키
+- 사용자 이름: tony
+- SSH 공개 키 원본: 새 키쌍 생성
+- 키 쌍 이름: myvirtualmachine-ssh-key
+
+3.1 [네트워킹] 설정에서 다음 공용 IP로 교체
+- MyPublicIPAddress
+
+4. DDoS 경고 구성
+4.1 MyDdosProtectionPlan의 [모니터링] 섹션에서 [경고] 클릭
+
+4.2 [+만들기]-[경고 규칙] 선택
+4.3 [범위] 탭 
+- 범위 선택: MyPublicIPAddress
+4.4 [조건] 탭
+- 조건 선택:Under DDoS attack or not
+- 연산자: 보다 큼
+- 임계값: 1
+
+4.5 [세부 정보] 탭
+- 경고 규칙 이름: MyDdosAlert
+

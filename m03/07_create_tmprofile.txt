@@ -1,0 +1,31 @@
+1. Traffic Manager 프로필 만들기
+- 이름: tmp[SUFFIX]
+- 라우팅 방법: 우선순위
+- 리소스 그룹: Contoso-RG-TM1
+
+2. Traffic Manager 엔드포인트 추가하기
+[첫 번째 끝점]
+- 이름: myPrimaryEndpoint
+- 대상 리소스 형식: App Service
+- 대상 리소스: webkor[SUFFIX]
+- 우선 순위: 1
+
+[두 번째 끝점]
+- 이름: myFailoverEndpoint
+- 대상 리소스 형식: App Service
+- 대상 리소스: webus[SUFFIX]
+- 우선 순위: 2
+
+3. 엔드포인트 상태가 '온라인'으로 변경되는지 확인
+
+4. Traffice Manager 프로필 테스트
+- [개요] 블레이드의 [DNS 이름] URL을 브라우저에서 사용 후 사이트 확인
+- [엔드포인트] - [myPrimaryEndpoint] - 상태 --> 사용 안 함 설정 후 확인
+
+5. Traffice Manager 엔드포인트 삭제
+
+6. Traffice Manager 구성을 지리적으로 변경
+
+7. 미국동부와 한국 중부로 엔드포인트 추가하기
+
+8. 테스트 

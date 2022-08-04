@@ -1,0 +1,13 @@
+1. 테스트 가상 머신 배포
+$RGName = "ContosoResourceGroup"
+
+New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile azuredeploy.json -TemplateParameterFile azuredeploy.parameters.json
+
+2. Contoso.com DNS 영역에 레코드가 표시되는지 확인.
+
+3. RDP를 사용해 테스트 VM1 연결하기
+- 사용자 이름: TestUser
+- 암호: TestPa$$w0rd!
+
+4. 명령 프롬프트 (cmd)를 열고 이름 풀이 확인.
+nslookup TestVM2.contoso.com

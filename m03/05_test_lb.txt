@@ -1,0 +1,26 @@
+1. 테스트 VM 만들기
+[기본 사항]
+- 리소스 그룹: IntLB-RG
+- 가상 머신 이름: myTestVM
+- 지역: East US
+- 이미지: Windows Server 2019 Datacenter - Gen 2
+- 크기: Standard_DS2_v3 - 2 vcpu, 8 GiB 메모리
+- 사용자 이름: tony
+- 암호: Pa55w.rd1234
+
+[네트워킹]
+- 가상 네트워크: IntLB-VNet
+- 서브넷: myBackendSubnet
+- 공용 IP: 없음
+- NIC 네트워크 보안 그룹: 고급
+- 네트워크 보안 그룹 구성: myNSG
+
+2. 부하 분산 장치 프런트 엔드 IP 확인
+
+3. 베스천 호스트로 테스트 VM 연결
+- [연결] --> [Bastion] 탭
+- [베스천 사용] 클릭
+- 사용자 이름: tony
+- 암호: Pa55w.rd1234
+
+4. 부하분산 장치 테스트

@@ -1,0 +1,15 @@
+1. PowerShell 모드 Cloud Shell 실행
+
+2. 클라우드 셸 스토리지 계정의 파일 공유에 m01 폴더 만들고 다음 파일 업로드
+- template.json
+- parameters.json
+- azuredeploy.json
+- azuredeploy.parameters.json
+- ManufacturingVMazuredeploy.json
+- ManufacturingVMazuredeploy.parameters.json
+
+3. 다음 명령을 실행해 ARM 템플릿 배포
+$RGName=New-AzResourceGroup -Name 'ContosoResourceGroup' -Location 'eastus'
+
+New-AzResourceGroupDeployment -ResourceGroupName $RGName.ResourceGroupName -TemplateFile template.json -TemplateParameterFile parameters.json
+

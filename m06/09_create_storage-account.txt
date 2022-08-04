@@ -1,0 +1,21 @@
+1. 스토리지 계정 만들기
+- 리소스 그룹: myResourceGroup
+- 스토리지 계정 이름: contosostorage[SUFFIX]
+- 지역: East US
+- 성능: 표준
+- 중복: LRS
+
+2. 파일 공유 만들기
+- 이름: marketing
+
+3. [보안+네트워킹] 섹션의 [네트워킹] 클릭.
+
+4. [선택한 네트워크] 선택
+
+5. [+기존 가상 네트워크 추가] 클릭
+- 가상 네트워크: CoreServicesVNet
+- 서브넷: Private
+
+6. [보안+네트워킹] 섹션의 [액세스 키] 클릭.
+MGwU9p8LXmNwhr9pNIz7Gz8PMT8ydP9IKk8qR3jkP5t6jrrcgTvd+d+3oGktelIherLFFr0joxMP+AStOymfvQ==
+

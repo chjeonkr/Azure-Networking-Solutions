@@ -1,0 +1,16 @@
+1. 가상 네트워크 만들기
+1.1 기본 사항
+- 리소스 그룹 이름: myResourceGroup
+- 이름: CoreServicesVNet
+- 지역: East US
+
+1.2 IP 주소
+- 주소 공간: 10.0.0.0/16
+- 서브넷 이름: Public
+- 서브넷 주소 공간: 10.0.0.0/24
+
+2. 서비스 엔드포인트 사용
+CoreServicesVNet에 서브넷 추가
+- 이름: Private
+- 서브넷 주소 범위: 10.0.1.0/24
+- 서비스 엔드포인트-서비스: Microsoft.Storage

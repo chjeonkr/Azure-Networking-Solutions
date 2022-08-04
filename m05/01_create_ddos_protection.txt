@@ -1,0 +1,13 @@
+1. DDos 보호 계획 만들기
+- 리소스 그룹: MyResourceGroup
+- 이름: MyDdoSProtectionPlan
+- 지역: East US
+
+2. DDos 보호 사용 가상 네트워크 만들기
+[기본 사항]
+- 리소스 그룹: MyResourceGroup
+- 이름: MyVirtualNetwork
+- 지역: East US
+[보안]
+- DDos Protection 표준: 사용
+- DDos 보호계획: MyDdoSProtectionPlan

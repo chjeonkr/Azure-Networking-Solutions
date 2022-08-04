@@ -1,0 +1,37 @@
+1. PowerShell 모드 Cloud Shell 실행
+
+2. 클라우드 셸 스토리지 계정의 파일 공유에 m06 폴더 만들고 다음 파일 업로드
+- VMs.json
+- VMs.parameters.json
+
+3. 다음 명령을 실행해 ARM 템플릿 배포
+$RGName = "myResourceGroup"
+
+New-AzResourceGroupDeployment -ResourceGroupName $RGName -TemplateFile VMs.json -TemplateParameterFile VMs.parameters.json
+
+4. ContosoPrivate 가상 머신 RDP 연결
+id: TestUser
+pw: TestPa$$w0rd!
+
+5. PowerShell 명령 창 실행 후, 다음 명령 실행
+$acctKey = ConvertTo-SecureString -String "MGwU9p8LXmNwhr9pNIz7Gz8PMT8ydP9IKk8qR3jkP5t6jrrcgTvd+d+3oGktelIherLFFr0joxMP+AStOymfvQ==" -AsPlainText -Force
+
+$credential = New-Object System.Management.Automation.PSCredential -ArgumentList "Azure\contosostoragekdk", $acctKey
+
+New-PSDrive -Name Z -PSProvider FileSystem -Root "\\contosostoragekdk.file.core.windows.net\marketing" -Credential $credential
+
+6. 다음 명령을 실행해 인터넷으로 아웃 바운드 연결이 없음 확인
+ping bing.com
+
+7. ContosoPublic 가상 머신과 RDP 연결
+
+8. 위 5번 실행 후 다음 에러 메시지 확인.
+New-PSDrive : Access is denied
+....
+
+9. 다음 명령 실행후 연결 확인
+ping bing.com
+
+10. 로컬 컴퓨터에서 스토리지 계정의 파일 공유에 만든 marketing 선택 후 다음 에러 메시지 확인
+"이 머신에 액세스 권한이 없는 것 같습니다."
+

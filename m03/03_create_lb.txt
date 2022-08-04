@@ -1,0 +1,12 @@
+1. 부하 분산 장치 만들기 - 기본 사항
+- 리소스 그룹: IntLB-RG
+- 이름: myIntLoadBalancer
+- 지역: East US
+- 형식: 내부
+- SKU: 표준
+
+2. 부하 분산 장치 만들기 - 프런트 엔드 IP 구성
+- 이름: LoadBalancerFrontEnd
+- 서브넷: myFrontEndSubnet
+- 할당: 동적
+

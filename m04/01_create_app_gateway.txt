@@ -1,0 +1,31 @@
+1. Application Gateway 배포
+2. [기본 사항]
+- 리소스 그룹: ContosoResourceGroup
+- 게이트웨이 이름: ContosoAppGateway
+- 지역: East US
+- 가상 네트워크: 새로 만들기
+
+3. [가상 네트워크 만들기]
+- 이름: ContosoVNet
+- 주소 범위: 10.0.0.0/16
+- 서브넷 1 이름: AGSubnet
+- 서브넷 1 주소 범위: 10.0.0.0/24
+- 서브넷 2 이름: BackendSubnet
+- 서브넷 2 주소 범위: 10.0.1.0/24
+
+4. [프런트 엔드]
+- 공용 IP 주소 이름: AGPublicIPAddress
+
+5. [백 엔드]
+- 이름: BackendPool
+- 대상 없이 백 엔드 풀 추가: 예
+
+6. [구성-라우팅 규칙 추가]
+- 규칙 이름: RoutingRule
+<수신기>
+- 수신기 이름: Listener
+- 프런트 엔드 IP: 공용
+<백 엔드 대상>
+- 백 엔드 대상: Backendpool
+- 백 엔드 설정: 새로 추가
+- 백 엔드 설정 이름: HTTPSetting

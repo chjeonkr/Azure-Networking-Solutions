@@ -1,0 +1,41 @@
+1. CoreServicesVnet Gateway 만들기(최대 1시간)
+- 이름: CoreServicesVnetGateway
+- 지역: East US
+- SKU: VpnGw1
+- 세대: Generation1
+- 가상 네트워크: CoreServicesVnet
+- 공용 IP 주소 이름: CoreServicesVnetGateway-ip
+- 공용 IP 주소 유형: 기본
+
+2. ManufacturingVnet Gateway
+- 이름: ManufacturingVnetGateway
+- 지역: West Europe
+- SKU: VpnGw1
+- 세대: Generation1
+- 가상 네트워크: ManufacturingVnet
+- 공용 IP 주소 이름: ManufacturingVnetGateway-ip
+- 공용 IP 주소 유형: 기본
+
+3. CoreServicesVnet에서 ManufacturingVnet으로 연결하기
+- 이름: CoreServicesGW-to-ManufacturingGW
+- 두 번째 가상 네트워크 게이트웨이: ManufacturingVnetGateway
+- 공유키: abc123
+
+4. ManufacturingVnet에서 CoreServicesVnet으로 연결하기
+- 이름: ManufacturingGW-to-CoreServicesGW
+- 두 번째 가상 네트워크 게이트웨이: CoreServicesVnetGateway
+- 공유키: abc123
+
+5. 두 개의 가상 네트워크 게이트웨이간 쌍방향 연결 확인
+
+6. ManufacturingVM 블레이드의 [실행 명령]-[RunPowerShellScript]에서 다음 명령 실행
+Test-NetConnection 10.20.20.4 -port 3389
+--> 연결 성공
+----------------------------메시지---------------
+ComputerName     : 10.20.20.4
+RemoteAddress    : 10.20.20.4
+RemotePort       : 3389
+InterfaceAlias   : Ethernet
+SourceAddress    : 10.30.10.4
+TcpTestSucceeded : True
+

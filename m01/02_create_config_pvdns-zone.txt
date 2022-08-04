@@ -1,0 +1,20 @@
+1. 프라이빗 DNS 영역 만들기
+- 리소스 그룹: ContosoResourceGroup
+- 이름: Contoso.com
+
+2. 자동 등록을 위해 서브넷 연결하기
+2.1 [Contoso.com | 가상 네트워크 링크] 블레이드에서 [+추가]
+- 링크 이름: CoreServicesVnetLink
+- 가상 네트워크: CoreServicesVnet (ContosoResourceGroup)
+- 자동 등록 사용: 선택
+
+2.2 [Contoso.com | 가상 네트워크 링크] 블레이드에서 [+추가]
+- 링크 이름: ManufacturingVnetLink
+- 가상 네트워크: ManufacturingVnet (ContosoResourceGroup)
+- 자동 등록 사용: 선택
+
+2.3 [Contoso.com | 가상 네트워크 링크] 블레이드에서 [+추가]
+- 링크 이름: ResearchVnetLink
+- 가상 네트워크: ResearchVnet (ContosoResourceGroup)
+- 자동 등록 사용: 선택
+

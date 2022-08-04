@@ -1,0 +1,10 @@
+1. Cloud Shell을 PowerShell 모드로 실행
+
+2. 파일 공유에 m04 폴더 만들고 다음 파일 업로드.
+- backend.json
+- backend.parameters.json
+- setup_labenv.ps1
+
+3. setup_labenv.ps1 실행
+
+4. 배포된 2개의 가상 머신 확인

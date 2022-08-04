@@ -1,0 +1,28 @@
+0. Font Door 사용자 지정 만들기
+
+1. Front Door 만들기 - 기본 사항
+- 리소스 그룹: ContosoResourceGroup
+- 이름: fd-contoso
+- 계층: 표준
+
+2. 엔드포인트
+
+2.1 엔드포인트 추가
+-엔드포인트 이름: contoso-edpt
+
+2.2 경로 추가
+-이름: contosoRoute
+
+2.2 원본 그룹 추가
+- 이름: ContosoOriginGroup
+- [+ 원본 추가]
+- 원본 형식: 앱 서비스
+- 이름1: webkor~
+- 호스트 이름1: webkor~
+- 이름2: webus~
+- 호스트 이름2: webus~
+
+3. Azure Front Door 동작 확인
+- [Front Door 관리자] 블레이드의 엔드포인트 URL 복사 후 브라우저에서 테스트.
+- webus 중지 후 확인
+

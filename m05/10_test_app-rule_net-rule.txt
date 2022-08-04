@@ -1,0 +1,19 @@
+1. 원격 데스크톱 연결(mstsc) 실행
+
+2. 방화벽의 공용 IP 주소 입력
+
+3. [옵션 표시] 클릭
+- 사용자 이름: TestUser
+
+4. [사용자 자격 증명 입력] 창에서 "TestPa$$w0rd!" 입력 후 [확인]
+
+5. 인터넷 익스플로러 실행 후 마이크로소프트 URL 입력 후 확인
+https://www.microsoft.com --> 방화벽이 접속 허용
+
+6. 인터넷 익스플로러에 구글 URL 입력 후 확인. 
+https://www.google.com --> 방화벽에 의해 차단됨
+
+7. Srv-workload-01 RDP 세션 내에서 Srv-workload-02의 개인 IP를 사용해 원격 데스크톱 연결 시도
+- 사용자 이름: TestUser
+- 암호: TestPa$$w0rd!
+

@@ -1,0 +1,16 @@
+1. 백엔드 풀 구성
+- 이름: myBackendPool
+- 가상 머신: myVM1, myVM2, myVM3
+
+2. 상태 프로브 구성
+- 이름: myHealthProbe
+- 프로토콜: HTTP
+- 간격: 15
+
+3. 부하분산 규칙 구성
+- 이름: myHTTPRule
+- 프런트 엔드 IP 주소: LoadBalancerFrontEnd
+- 백 엔드 풀: myBackendPool
+- 포트 / 백 엔드 포트: 80
+- 상태 프로브: myHealthProbe
+- 유휴 제한 시간: 15

@@ -1,0 +1,17 @@
+1. 가상 네트워크 만들기 - 기본 사항
+- 리소스 그룹: IntLB-RG 
+- 이름: IntLB-VNet
+- 지역: East US
+
+2. 가상 네트워크 만들기 - IP 주소
+- IPv4 주소 공간: 10.1.0.0/16
+- 서브넷1 이름: myBackendSubnet
+- 서브넷1 주소 공간: 10.1.0.0/24
+- 서브넷2 이름: myFrontEndSubnet
+- 서브넷2 주소 공간: 10.1.2.0/24
+
+3. 가상 네트워크 만들기 - 보안
+- 베스천 이름: myBastionHost
+- AzureBastionSubnet 주소 공간: 10.1.1.0/24
+- 공용 IP 주소: myBastionIP
+

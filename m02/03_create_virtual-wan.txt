@@ -1,0 +1,16 @@
+1. 가상 WAN 만들기
+- 리소스 그룹: ContosoResourceGroup
+- 리소스 그룹 위치: East US
+- 이름: ContosoVirtualWAN
+- 유형: 표준
+
+2. 허브 만들기 (30분 소요)
+2.1 ContosoVirtualWAN의 [연결] 섹션에서 [허브] 선택 후, [+새 허브] 클릭
+2.2 가상 허브 만들기
+[기본 사항]
+- 지역: West US
+- 이름: ContosoVirtualWANHub-WestUS
+- 허브 프라이빗 주소 공간: 10.60.0.0/24
+[사이트 대 사이트]
+- 사이트 대 사이트(VPN 게이트웨이)를 만드시겠습니까?: 예
+- 게이트웨이 배율 단위: 1 배율 단위
